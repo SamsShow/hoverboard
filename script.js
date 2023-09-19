@@ -9,9 +9,9 @@ for (let i = 0; i < SQUARES; i++) {
     square.addEventListener('mouseover', () => setColor(square));
     square.addEventListener('mouseout', () => removeColor(square));
     square.addEventListener('click', () => {
-     console.log('clicked');
-     square.classList.toggle("w");
- });
+        square.classList.toggle('w');
+        setPermanentColor(square, removeColor);
+    });
 
     container.appendChild(square);
 }
@@ -28,8 +28,8 @@ function removeColor(element) {
 }
 
 function setPermanentColor(element, mouseoutCallback) {
-    element.style.background = 'white'; 
-    element.style.boxShadow = 'none'; 
+    element.style.background = 'white';
+    element.style.boxShadow = 'none';
     element.removeEventListener('mouseout', mouseoutCallback);
 }
 

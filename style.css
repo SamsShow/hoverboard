@@ -29,8 +29,8 @@
     transition: 2s ease;
   }
 
-  .square .w{
-    background-color: azure;
+  .w{
+    background-color: azure !important;
   }
   
   .square:hover {
